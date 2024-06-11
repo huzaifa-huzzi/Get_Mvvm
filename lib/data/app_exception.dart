@@ -17,3 +17,11 @@ class InternetException extends AppException {
 class RequestTimeout extends AppException {
   RequestTimeout ([String? message]) :super (message,'RequestTimeout');
 }
+
+class InvalidUrl extends AppException {
+  InvalidUrl ([String? message]) :super (message,'InvalidUrl');
+}
+
+class FetchDataException extends AppException {
+  FetchDataException ([String? message]) :super (message,'Fetch Exception');
+}
