@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_mvvm/Resources/Routes/Routes_Initiliazing.dart';
 import 'package:getx_mvvm/view/Splash_Screen.dart';
 
 void main() {
@@ -11,10 +12,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const  GetMaterialApp(
+    return   GetMaterialApp(
       title: 'Getx Mvvm Architecture',
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home:const  SplashScreen(),
+      getPages:AppRoutes.appRoutes() ,
     );
   }
 }
