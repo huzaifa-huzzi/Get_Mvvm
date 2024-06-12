@@ -1,5 +1,3 @@
-
-
 import 'package:get/get.dart';
 import 'package:getx_mvvm/Resources/Routes/Routes_name.dart';
 import 'package:getx_mvvm/view/Splash_Screen.dart';
