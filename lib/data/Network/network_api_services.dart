@@ -45,14 +45,17 @@ class NetworkApiServices extends BaseApiServices {
     try{
       final response = await http.post(Uri.parse(url),
         // if Form data so it will be  body :data
-        body: jsonEncode(data)
+        body: data
       ).timeout(const Duration(seconds: 10));
       responseJson = returnResponse(response);
 
     }on SocketException{
       throw InternetException('');
-    }on RequestTimeout{
+    }on RequestTimeout {
       throw RequestTimeout('');
+    }
+    if(kDebugMode){
+      print(responseJson);
     }
 
     return responseJson;

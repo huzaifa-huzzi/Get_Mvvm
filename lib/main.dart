@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     return   GetMaterialApp(
       title: 'Getx Mvvm Architecture',
       translations:Languages(),
+      debugShowCheckedModeBanner: false,
       locale:const  Locale('en','US'),
       fallbackLocale:const Locale('en','US'),
       home:const  SplashScreen(),
