@@ -6,6 +6,8 @@ class AppRoutes{
 
   static appRoutes() => [
     GetPage(name:RouteName.splashScreen , page: () =>const  SplashScreen(),transition: Transition.leftToRight),
+    // login Screen
+    GetPage(name:RouteName.splashScreen , page: () =>const  SplashScreen()),
 
   ];
 

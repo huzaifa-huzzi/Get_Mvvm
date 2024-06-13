@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -13,6 +14,9 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.teal,
+      body: Center(
+        child: Text('Course'.tr,textAlign: TextAlign.center,),
+      ),
     );
   }
 }
