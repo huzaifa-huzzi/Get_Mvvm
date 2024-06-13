@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_mvvm/view_model/Services/splash_scervices.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -10,6 +11,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  SplashServices services = SplashServices();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    services.isLogin();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
