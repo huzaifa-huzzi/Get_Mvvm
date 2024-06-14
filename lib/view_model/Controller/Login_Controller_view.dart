@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:getx_mvvm/Models/login/Login_model.dart';
 import 'package:getx_mvvm/Repository/login_respository.dart';
+import 'package:getx_mvvm/Resources/Routes/Routes_name.dart';
 import 'package:getx_mvvm/Utils/Utils.dart';
 import 'package:getx_mvvm/view_model/user_prefrences/user_prefrences.dart';
 
@@ -36,9 +37,9 @@ class LoginControllerView extends GetxController {
         Utils.SnackBar(value['error'], 'Login');
       }else{
         userPrefrences.saveUser(LoginViewModel.fromJson(value)).then((value){
-
+           Get.toNamed(RouteName.homeScreen);
         }).onError((error,stackTrace){
-          
+
         });
         Utils.SnackBar('Login Succesful', 'Login');
       }
