@@ -6,4 +6,7 @@ class RouteName{
   // login Screens
  static const String loginView = '/LoginView';
 
+ //views name
+static const String homeScreen = '/HomeScreen';
+
 }
