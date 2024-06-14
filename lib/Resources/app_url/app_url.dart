@@ -6,4 +6,8 @@ class AppUrl {
 
   static const String loginApi = '$baseUrl/api/login';
 
+  //for home Screens
+
+ static const String userListApi = 'https://webhook.site/3c05a17b-3c4e-4f07-96f6-c613b4df4d74';
+
 }
