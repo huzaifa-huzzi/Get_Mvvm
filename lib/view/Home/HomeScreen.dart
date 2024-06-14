@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_mvvm/Resources/Components/internet_exception%20_widget.dart';
 import 'package:getx_mvvm/Resources/Routes/Routes_name.dart';
 import 'package:getx_mvvm/Utils/Utils.dart';
 import 'package:getx_mvvm/data/response/status.dart';
@@ -50,7 +51,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
           case Status.Error:
             // TODO: Handle this case.
-            return Text('Something went Wrong');
+          if(controller.error.value == 'No internet'){
+            return InternetExceptionWidget(onPress: (){
+              controller.userList;
+            });
+          }
+            return Center(child: Text(controller.error.toString()),);
 
           case Status.Completed:
             return  ListView.builder(
