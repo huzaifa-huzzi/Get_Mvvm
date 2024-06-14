@@ -8,12 +8,14 @@ import 'package:getx_mvvm/data/response/status.dart';
 class UserListViewModel extends GetxController{
 
   final api = UserListRepository();
-  final userList = UserListViewModel().obs;
+  final userList = UserListModel().obs;
 
 final RxrequestStatus = Status.Loading.obs;
 
+
+
  void setLoading(Status _value) => RxrequestStatus.value = _value;
-  void setUserList(UserListModel _value) => userList.value = _value as UserListViewModel;
+  void setUserList(UserListModel _value) => userList.value = _value ;
 
   void userListApi(){
     api.userListApi().then((value){
