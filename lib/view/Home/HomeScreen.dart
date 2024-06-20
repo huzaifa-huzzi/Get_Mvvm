@@ -60,6 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
             return Center(child: Text(controller.error.toString()),);
 
           case Status.Completed:
+
             return  ListView.builder(
                 itemCount:controller.userList.value.data!.length ,
                 itemBuilder: (context,index){
