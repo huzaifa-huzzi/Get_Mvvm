@@ -53,6 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
             // TODO: Handle this case.
           if(controller.error.value == 'No internet'){
             return InternetExceptionWidget(onPress: (){
+
               controller.userList;
             });
           }
