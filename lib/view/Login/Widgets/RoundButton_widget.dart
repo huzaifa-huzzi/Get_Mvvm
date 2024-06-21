@@ -16,7 +16,7 @@ class RoundbuttonWidget extends StatelessWidget {
         width: 200,
         loading: loginView.loading.value,
         title: 'login'.tr, onPress: (){
-      if(_formKey.currentState!.validate()){
+      if(formkey.currentState!.validate()){
         loginView.loginApi();
       }
 
