@@ -4,6 +4,7 @@ import 'package:getx_mvvm/Resources/Components/RoundButton.dart';
 import 'package:getx_mvvm/Utils/Utils.dart';
 import 'package:getx_mvvm/view/Login/Widgets/Input_Email_Widget.dart';
 import 'package:getx_mvvm/view/Login/Widgets/Input_Password_Widget.dart';
+import 'package:getx_mvvm/view/Login/Widgets/RoundButton_widget.dart';
 import 'package:getx_mvvm/view_model/Controller/Login_Controller_view.dart';
 
 
@@ -46,16 +47,7 @@ class _LoginViewState extends State<LoginView> {
               ),
             ),
           const   SizedBox(height: 40,),
-            Obx(() => RoundButton(
-                width: 200,
-                loading: loginView.loading.value,
-                title: 'login'.tr, onPress: (){
-              if(_formKey.currentState!.validate()){
-                 loginView.loginApi();
-              }
-
-
-            }) )
+            RoundbuttonWidget(formkey: _formKey),
 
           ],
         ),
