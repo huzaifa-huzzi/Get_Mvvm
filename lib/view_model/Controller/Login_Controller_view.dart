@@ -37,6 +37,7 @@ class LoginControllerView extends GetxController {
         Utils.SnackBar(value['error'], 'Login');
       }else{
         userPrefrences.saveUser(LoginViewModel.fromJson(value)).then((value){
+          Get.delete<LoginViewModel>();
            Get.toNamed(RouteName.homeScreen);
         }).onError((error,stackTrace){
 
