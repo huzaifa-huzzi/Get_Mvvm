@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_mvvm/Resources/Components/RoundButton.dart';
 import 'package:getx_mvvm/Utils/Utils.dart';
+import 'package:getx_mvvm/view/Login/Widgets/Input_Email_Widget.dart';
+import 'package:getx_mvvm/view/Login/Widgets/Input_Password_Widget.dart';
 import 'package:getx_mvvm/view_model/Controller/Login_Controller_view.dart';
 
 
@@ -37,37 +39,9 @@ class _LoginViewState extends State<LoginView> {
               key: _formKey ,
               child: Column(
                 children: [
-                  TextFormField(
-                    controller: loginView.emailController.value,
-                    focusNode: loginView.emailFocus.value,
-                    validator: (value){
-                      if(value!.isEmpty){
-                        Utils.SnackBar('Enter_email'.tr,'Email');
-                      }
-                    },
-                    onFieldSubmitted: (value){
-                      Utils.fieldFocusChange(context, loginView.emailFocus.value, loginView.passwordFocus.value);
-                    },
-                    decoration: InputDecoration(
-                        hintText: 'email_hint'.tr,
-                        border: OutlineInputBorder()
-                    ),
-                  ),
+                  InputEmailWidget(),
                   const   SizedBox(height: 20,),
-                  TextFormField(
-                    controller: loginView.passwordController.value,
-                    focusNode: loginView.passwordFocus.value,
-                    obscureText: true,
-                    validator: (value){
-                      if(value!.isEmpty){
-                        Utils.SnackBar('Enter_password'.tr,'Enter');
-                      }
-                    },
-                    decoration: InputDecoration(
-                        hintText: 'password_hint'.tr,
-                        border: OutlineInputBorder()
-                    ),
-                  ),
+                  InputPasswordWidget(),
                 ],
               ),
             ),
